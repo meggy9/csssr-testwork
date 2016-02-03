@@ -1,0 +1,46 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.wrapper {
+	width: 1280px;
+	margin: 0 auto;
+	background: #797979;
+}
+
+.inner-wrapper {
+	width: 1000px;
+	margin: 0 auto;
+	background: url(../images/inner-background.png);
+}
+
+%clearfix {
+	&:before, &:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+//--------Mixins---------//
+
+@mixin border-radius ($value){
+	-webkit-border-radius: $value;
+	-moz-border-radius: $value;
+	-ms-border-radius: $value;
+	-o-border-radius: $value;
+	border-radius: $value;
+}
+
+
+@import "_includes/_normalize.scss";
+@import "_includes/_header.scss";
+@import "_includes/_fonts.scss";
+@import "_includes/_content.scss";

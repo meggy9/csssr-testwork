@@ -1,0 +1,317 @@
+.content-wrapper {
+	width: 770px;
+	margin: 0 auto;
+}
+
+.skills {
+	margin-top: 55px;
+	padding-bottom: 75px;
+}
+
+.skills__item {
+	margin-top: 20px;
+	overflow: hidden;
+
+	&:nth-child(6) {
+		margin-top: 43px;
+	}
+
+	&:nth-child(7) {
+		margin-top: 43px;
+	}
+
+	&:nth-child(8) {
+		margin-top: 42px;
+	}
+}
+
+.item-name, .item-value, .item-value_underlined {
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+.item-name {
+	font-family: 'pt_sansregular';
+	font-weight: bold;
+	font-size: 1.4em;
+}
+
+.item-value_underlined {
+	position: relative;
+	font-family: 'pt_sansregular';
+	font-size: 1.6em;
+	word-spacing: 0.8em;
+	padding: 0px 20px 10px 20px;
+	margin-left: 5px;
+
+	&:after {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		content: "";
+		display: block;
+		@include sprite-sprite('underline');
+		width: sprite-sprite-width('underline');
+		height: sprite-sprite-height('underline');
+	} 
+}
+
+.item-value {
+	position: relative;
+	font-family: 'pt_sansregular';
+	font-size: 1em;
+	margin-left: 5px;
+}
+
+.school-link {
+	font-family: 'pt_sansregular';
+	font-size: 1.3em;
+	font-weight: bold;
+	color: #014f98;
+	padding-bottom: 10px;
+}
+
+.radio-button {
+	position: relative;
+	width: 0px;
+	height: 0px;
+	margin-left: 50px;
+	cursor: pointer;
+	outline: none;
+
+	&:before {
+		position: absolute;
+		left: -25px;
+		top: -20px;
+		display: block;
+		content: "";
+		@include sprite-sprite('radio-off');
+		width: sprite-sprite-width('radio-off');
+		height: sprite-sprite-height('radio-off');
+	}
+
+	&:after {
+		position: absolute;
+		left: -25px;
+		top: -20px;
+		display: none;
+		content: "";
+		@include sprite-sprite('radio-on');
+		width: sprite-sprite-width('radio-on');
+		height: sprite-sprite-height('radio-on');
+	}
+}
+
+.radio-button:checked {
+	&:before {
+		display: none;
+	}
+
+	&:after {
+		display: block;
+	}
+}
+
+.radio-button-label {
+	padding-left: 5px;
+	font-family: 'pt_sansregular';
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+.item-note {
+	position: relative;
+	margin: 11px 0 0 7px;
+	line-height: 20px;
+	font-family: 'pt_sansregular';
+	font-size: 0.9em;
+
+	&:before {
+		content: "*";
+		position: absolute;
+		left: -13px;
+		top: 7px;
+		display: block;
+		font-size: 2.3em;
+		font-family: 'pt_sansregular';
+	}
+}
+
+.skills-checkbox__list {
+	margin-top: 26px;
+	margin-left: 2px;
+}
+
+.skills-checkbox__item {
+	width: 235px;
+	margin: 0 0 11px 25px;
+	float: left;
+	
+	font-family: 'pt_sansregular';
+	font-size: 1.2em;
+	font-weight: bold;
+	letter-spacing: 0.06em;
+
+	&:nth-child(3n+1) {
+		margin-left: 0px;
+	}
+}
+
+.skills-checkbox-check, .skills-checkbox-label {
+	cursor: pointer;
+}
+
+.skills-checkbox-check {
+	position: relative;
+	width: 0;
+	height: 0;
+	margin-left: 12px;
+
+	&:focus {
+		outline: none;
+	}
+
+ 	&:before {
+ 		position: absolute;
+ 		bottom: -3px;
+ 		right: 2px;
+ 		content: "";
+ 		display: block;
+ 		outline-style: none;
+ 		@include sprite-sprite('checkbox-off');
+		width: sprite-sprite-width('checkbox-off');
+		height: sprite-sprite-height('checkbox-off');
+ 	}
+
+ 	&:hover {
+ 		cursor: pointer;
+ 	}
+}
+
+.skills-checkbox-check:checked {
+	&:after {
+		position: absolute;
+ 		bottom: -1px;
+ 		right: -2px;
+ 		content: "";
+ 		display: block;
+ 		outline-style: none;
+ 		@include sprite-sprite('checkbox-hover');
+		width: sprite-sprite-width('checkbox-hover');
+		height: sprite-sprite-height('checkbox-hover');
+ 	}
+}
+
+.js-scale__item {
+	padding: 36px 0 0 6px;
+	overflow: visible;
+}
+
+.js-scale-block {
+	position: relative;
+}
+
+.js-scale {
+	position: relative;
+	@include sprite-sprite('js-scale');
+	height: sprite-sprite-height('js-scale');
+	width: sprite-sprite-width('js-scale');
+	margin-top: 23px;
+}
+
+.js-scale__mark-inner {
+	position: absolute;
+	top: 43px;
+	@include sprite-sprite('mark-inner');
+	height: sprite-sprite-height('mark-inner');
+	width: sprite-sprite-width('mark-inner');
+}
+
+#inner-first {
+	left: 147px;
+}
+
+#inner-second {
+	left: 372px;
+}
+
+.js-scale__mark-outer {
+	position: absolute;
+	top: 43px;
+	@include sprite-sprite('mark-outer');
+	height: sprite-sprite-height('mark-outer');
+	width: sprite-sprite-width('mark-outer');
+}
+
+#outer-first {
+	left: 0px;
+}
+
+#outer-second {
+	left: 756px;
+}
+
+.js-scale__pointer {
+	position: absolute;
+	top: 1px;
+	left: 141px;
+	@include sprite-sprite('pointer');
+	height: sprite-sprite-height('pointer');
+	width: sprite-sprite-width('pointer');
+	cursor: pointer;
+}
+
+.js-scale__text {
+	position: absolute;
+	top: 70px;
+	display: inline-block;
+	max-width: 200px;
+	font-family: 'pt_sansregular';
+	font-size: 0.8em;
+	font-weight: bold;
+}
+
+.js-scale__text-first {
+	left: -1px;
+}
+
+.js-scale__text-second {
+	left: 143px;
+}
+
+.js-scale__text-third {
+	left: 371px;
+}
+
+.js-scale__text-fourth {
+	right: 0px;
+	top: 76px;
+}
+
+.item-date {
+	margin-top: 107px;
+}
+
+.date-name {
+	font-size: 1.3em;
+	font-weight: bold;
+	letter-spacing: 0.07em;
+}
+
+.date-value {
+	position: relative;
+	padding: 0 0 15px 7px;
+	font-size: 1.65em;
+	letter-spacing: 0.22em;
+	
+	&:after {
+		content:"";
+		display: block;
+		position: absolute;
+		left: 0;
+		bottom: 5px;
+		@include sprite-sprite('date-underline');
+		width: sprite-sprite-width('date-underline');
+		height: sprite-sprite-height('date-underline');
+	}
+}

@@ -22,6 +22,7 @@ gulp.task('jade', function() {
 
 gulp.task('compass', function() {
   gulp.src('./scss/main.scss')
+    .pipe(plumber())
     .pipe(compass({
       config_file: './config.rb',
       css: 'css',
@@ -33,6 +34,6 @@ gulp.task('compass', function() {
 gulp.task('watch', function(){
 	gulp.watch(jadePath1, ['jade']);
   gulp.watch(jadePath2, ['jade']);
-	gulp.watch('./scss/includes/*.scss', ['compass']);
+	gulp.watch('./scss/_includes/*.scss', ['compass']);
   gulp.watch('./scss/*.scss', ['compass']);
 });

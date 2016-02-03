@@ -1,0 +1,64 @@
+.skills#skills
+	ul.skills__list
+		li.skills__item
+			h3.item-name Полное ФИО
+			.item-value_underlined Мирзоев Рамазан Султанович
+		li.skills__item
+			h3.item-name Год рождения
+			.item-value_underlined 1994
+		li.skills__item
+			h3.item-name Место жительства
+			.item-value_underlined г.Курск, Россия
+		li.skills__item
+			h3.item-name Скайп
+			.item-value_underlined micram25
+		li.skills__item
+			h3.item-name Почта
+			.item-value_underlined meggy9@mail.ru
+		li.skills__item
+			h3.item-name Выпускник
+			.item-value
+				a(href="http://loftschool.com").school-link loftschool.com
+				input(id="graduation-true", type="radio", checked).radio-button
+				label(for="graduation-true").radio-button-label Да
+				input(id="graduation-false", type="radio").radio-button
+				label(for="graduation-false").radio-button-label Нет
+		li.skills__item
+			h3.item-name Практические навыки
+			.item-value 
+				.item-note Отметьте только те технологии и типы задач, с которыми вы хорошо знакомы. Отсутсвие опыта отнюдь не означает, что у вас меньше шансов стать нашим сотрудником. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.
+				ul.skills-checkbox__list
+					each val, index in {1:'Методология БЭМ', 2:'Jade',3:'Верстка рассылок',4:'jQuery',5:'Stylus',6:'Адаптивная верстка',7:'Использую GULP',8:'Знаю (изучаю) Angular',9:'Использую Dropbox',10:'HAML',11:'Верстка под Android',12:'Использую Gmail',13:'SASS',14:'Верстка под iOS',15:'Использую GitHub',16:'LESS',17:'Верстка под Windows Phone',18:'CoffeeScript'}
+						case index
+							when '1'
+							when '2'
+							when '4'
+							when '6'
+							when '7'
+							when '9'
+							when '12'
+							when '13'
+							when '15'
+								li.skills-checkbox__item
+									input(id="#{index}", type="checkbox", class="skills-checkbox-check", checked)
+									label(for="#{index}" class="skills-checkbox-label")= val
+							default
+								li.skills-checkbox__item
+									input(id="#{index}", type="checkbox", class="skills-checkbox-check")
+									label(for="#{index}" class="skills-checkbox-label")= val
+		li.js-scale__item.skills__item
+			h3.item-name Уровень владения JavaScript
+			.item-value.js-scale-block#js-scale-block
+				.js-scale(id="js-scale")
+					.js-scale__pointer(id="pointer")
+				.js-scale__mark-inner(id="inner-first")
+				.js-scale__mark-inner(id="inner-second")
+				.js-scale__mark-outer(id="outer-first")
+				.js-scale__mark-outer(id="outer-second")
+				.js-scale__text.js-scale__text-first Не владею
+				.js-scale__text.js-scale__text-second Использую готовые решения
+				.js-scale__text.js-scale__text-third Использую готовые решения и умею их переделывать
+				.js-scale__text.js-scale__text-fourth Пишу сложные скрипты
+		li.skills__item.item-date
+			h3.item-name.date-name Дата заполнения
+			.item-value.date-value 03.02.2016

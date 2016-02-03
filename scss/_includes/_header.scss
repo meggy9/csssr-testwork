@@ -1,0 +1,56 @@
+$sprite-layout: vertical;
+$sprite-spacing: 70px;
+
+@import "sprite/*.png";
+
+.header-wrapper {
+	position: relative;
+	height: 302px;
+	width: 898px;
+	margin: 0 auto;
+
+}
+
+.logo {
+	position: absolute;
+	left: -4px;
+	top: 67px;
+}
+
+.logo__image {
+	@include sprite-sprite("logo");
+	height: sprite-sprite-height("logo");
+	width: sprite-sprite-width("logo");
+}
+
+.logo__link {
+	display: block;
+	width: sprite-sprite-width("logo");
+	height: sprite-sprite-height("logo");
+}
+
+.logo__substring {
+	width: sprite-sprite-width("logo");
+	margin-top: 5px;
+	font-family: 'pt_sansregular';
+	font-size: 0.6em;
+	text-align: center;
+}
+
+.stamp {
+	position: absolute;
+	top: 48px;
+	right: 2px;
+	@include sprite-sprite("stamp");
+	height: sprite-sprite-height("stamp");
+	width: sprite-sprite-width("stamp");
+}
+
+.case {
+	position: absolute;
+	bottom: 0;
+	left: 324px;
+	@include sprite-sprite("case");
+	height: sprite-sprite-height("case");
+	width: sprite-sprite-width("case");
+}
